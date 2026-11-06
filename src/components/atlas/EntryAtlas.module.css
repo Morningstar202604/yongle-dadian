@@ -1,0 +1,169 @@
+.atlas {
+  border-top: 1px solid var(--c-ink);
+  padding-top: 14px;
+}
+
+.readout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  align-items: baseline;
+  min-height: 30px;
+  padding: 2px 2px 10px;
+  color: var(--c-ink-soft);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.readTitle {
+  color: var(--c-ink);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.readMeta {
+  color: var(--c-cinnabar);
+  font-variant-numeric: tabular-nums;
+}
+
+.readHint {
+  color: var(--c-ink-muted);
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 0 2px 10px;
+  color: var(--c-ink-muted);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+
+.legendItem {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.dot存,
+.dot残,
+.dot佚 {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-ink);
+}
+
+.dot残 {
+  background: var(--c-gold);
+}
+
+.dot佚 {
+  background: var(--c-cinnabar);
+}
+
+.legendNote {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.plotWrap {
+  overflow-x: auto;
+  border: 1px solid var(--c-line);
+  background:
+    linear-gradient(180deg, rgb(229 223 207 / 22%), transparent 38%),
+    var(--c-paper);
+  -webkit-overflow-scrolling: touch;
+}
+
+.plot {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
+.rule {
+  stroke: var(--c-line);
+  stroke-width: 0.8;
+}
+
+.tick {
+  stroke: var(--c-line);
+  stroke-width: 0.6;
+  stroke-dasharray: 2 5;
+}
+
+.bandLabel {
+  fill: var(--c-ink-soft);
+  font-family: var(--font-serif);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.tickLabel {
+  fill: var(--c-ink-muted);
+  font-family: var(--font-serif);
+  font-size: 8.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.caption {
+  fill: var(--c-cinnabar);
+  font-family: var(--font-serif);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+.dot {
+  cursor: pointer;
+  fill: var(--c-ink);
+  opacity: 0.42;
+  transition:
+    opacity 0.16s var(--ease-out),
+    r 0.16s var(--ease-out);
+}
+
+.dot:hover,
+.dot:focus,
+.hot {
+  opacity: 1;
+  stroke: var(--c-paper-high);
+  stroke-width: 1.4;
+  r: 4.2;
+}
+
+.state存 {
+  fill: var(--c-ink);
+}
+
+.state残 {
+  fill: var(--c-gold);
+}
+
+.state佚 {
+  fill: var(--c-cinnabar);
+}
+
+.footNote {
+  margin: 10px 0 0;
+  color: var(--c-ink-muted);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 680px) {
+  .plot {
+    min-width: 860px;
+  }
+}
+
+.point {
+  cursor: pointer;
+}
+
+.hit {
+  fill: transparent;
+}

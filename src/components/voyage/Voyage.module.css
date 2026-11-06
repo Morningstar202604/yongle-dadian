@@ -12,7 +12,7 @@
   pointer-events: none;
   background: repeating-linear-gradient(
     180deg,
-    rgb(229 223 207 / 5%) 0 1px,
+    rgb(229 223 207 / 3%) 0 1px,
     transparent 1px 72px
   );
 }

@@ -10,6 +10,7 @@ import type { CategoryFilter } from '@/data/taxonomy';
 export function useEntryFilter(entries: Entry[]) {
   const [category, setCategory] = useState<CategoryFilter>('all');
   const [keyword, setKeyword] = useState('');
+  const [seq, setSeq] = useState(0);
   const deferredKeyword = useDeferredValue(keyword);
 
   const counts = useMemo(() => countByCategory(entries), [entries]);
@@ -21,6 +22,16 @@ export function useEntryFilter(entries: Entry[]) {
 
   const isFiltering = category !== 'all' || keyword.trim().length > 0;
 
+  const changeCategory = (next: CategoryFilter) => {
+    setCategory(next);
+    setSeq((value) => value + 1);
+  };
+
+  const changeKeyword = (next: string) => {
+    setKeyword(next);
+    setSeq((value) => value + 1);
+  };
+
   return {
     category,
     keyword,
@@ -29,11 +40,13 @@ export function useEntryFilter(entries: Entry[]) {
     results,
     isFiltering,
     isPending: keyword !== deferredKeyword,
-    setCategory,
-    setKeyword,
+    seq,
+    setCategory: changeCategory,
+    setKeyword: changeKeyword,
     clear: () => {
       setCategory('all');
       setKeyword('');
+      setSeq((value) => value + 1);
     },
   };
 }

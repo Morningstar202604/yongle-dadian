@@ -46,4 +46,18 @@ export interface VoyageStop {
   description: string;
 }
 
+/** 流散记：一桩书厄的年份、路线、故事、物证与所据。 */
+export interface DiasporaStory {
+  no: string;
+  title: string;
+  year: number;
+  place: string;
+  route: string;
+  lead: string;
+  body: string[];
+  clues: string[];
+  counter: string;
+  sources: string[];
+}
+
 export type ReaderMode = 'vertical' | 'horizontal';

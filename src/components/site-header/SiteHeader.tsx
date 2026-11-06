@@ -4,7 +4,7 @@ const SECTIONS = [
   { id: 'intro', label: '卷首' },
   { id: 'catalog', label: '总目' },
   { id: 'chron', label: '年表' },
-  { id: 'voyage', label: '流布' },
+  { id: 'voyage', label: '流散' },
 ] as const;
 
 interface SiteHeaderProps {
