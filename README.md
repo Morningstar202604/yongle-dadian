@@ -30,6 +30,18 @@ npm run format
 
 要求 Node ≥ 20。`dist/` 为纯静态产物，可直接放到任意静态站点或子目录（`base: './'` 使用相对路径）；不要用 `file://` 直接打开，ES Module 需要 HTTP 服务。
 
+## 部署
+
+GitHub Pages 走 Actions：`.github/workflows/deploy.yml` 在 `main` 每次推送时执行 `npm ci`、`npm run build`，把 `dist/` 作为 Pages 产物发布。`base: './'` 使用相对路径，因此仓库子路径（`/yongle-dadian/`）无需改配置。
+
+线上入口：
+
+- <https://badhope.github.io/yongle-dadian/>
+- <https://x33834.github.io/yongle-dadian/>
+- <https://morningstar202604.github.io/yongle-dadian/>
+
+源码镜像：GitHub 三个账号、GitCode `badhope/yongle-dadian`、Gitee `badhope/yongle-dadian`。本地推送到任一远端即可；Pages 由各 GitHub 仓库自己的 Actions 部署。
+
 ## 目录
 
 ```
