@@ -1,0 +1,15 @@
+.inverse:global(.sectionHead) {
+  border-top-color: var(--c-inverse-line);
+}
+
+.inverse :global(.kicker) {
+  color: var(--c-gold);
+}
+
+.inverse :global(.sectionTitle) {
+  color: var(--c-paper-high);
+}
+
+.inverse :global(.sectionLead) {
+  color: var(--c-inverse-soft);
+}

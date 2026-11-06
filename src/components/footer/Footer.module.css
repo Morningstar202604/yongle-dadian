@@ -1,0 +1,61 @@
+.footer {
+  position: relative;
+  padding: clamp(36px, 6vw, 64px) 0 18px;
+  border-top: 3px double var(--c-line-strong);
+  background: var(--c-paper-low);
+}
+
+.end {
+  margin: 0 0 clamp(20px, 4vw, 34px);
+  color: var(--c-ink-muted);
+  font-size: 11px;
+  letter-spacing: 0.5em;
+}
+
+.colophon {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 18px 0;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+}
+
+.colophon div {
+  display: grid;
+  gap: 3px;
+}
+
+.colophon dt {
+  color: var(--c-cinnabar);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+}
+
+.colophon dd {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--c-ink-soft);
+  font-size: 12.5px;
+  line-height: 1.8;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 16px;
+  color: var(--c-ink-muted);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 720px) {
+  .colophon {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+}

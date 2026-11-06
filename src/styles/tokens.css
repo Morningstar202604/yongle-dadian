@@ -1,0 +1,46 @@
+:root {
+  /* 色：墨、靛、朱、纸、金 */
+  --c-ink: #15181a;
+  --c-ink-soft: #474b46;
+  --c-ink-muted: #6c6e63;
+  --c-paper: #d9d2c0;
+  --c-paper-high: #e5dfcf;
+  --c-paper-low: #cec6b2;
+  --c-indigo: #17303d;
+  --c-indigo-deep: #0c1b24;
+  --c-cinnabar: #9a2b22;
+  --c-gold: #a98a56;
+  --c-line: rgb(21 24 26 / 17%);
+  --c-line-strong: rgb(21 24 26 / 38%);
+  --c-inverse-line: rgb(229 223 207 / 18%);
+  --c-inverse-soft: rgb(229 223 207 / 72%);
+  --c-inverse-muted: rgb(229 223 207 / 52%);
+
+  /* 字 */
+  --font-serif:
+    'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'STSong', SimSun, serif;
+  --font-kai: 'Kaiti SC', STKaiti, KaiTi, 'Noto Serif SC', serif;
+
+  /* 尺度 */
+  --page-max: 1180px;
+  --gutter: clamp(18px, 5vw, 64px);
+  --nav-h: 58px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* 动效 */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-ink: cubic-bezier(0.19, 1, 0.22, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.32s;
+  --dur-slow: 0.6s;
+
+  /* 阴影 */
+  --shadow-leaf: 0 30px 80px rgb(0 0 0 / 45%);
+}
